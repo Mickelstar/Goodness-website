@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adike Goodness Ndidi</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background-color: #fff0f5;
+        color: #2c003e;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      header {
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeInDown 1.5s ease;
+        position: relative;
+      }
+      header h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+      header p {
+        font-size: 1.3em;
+      }
+      .section {
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease forwards;
+      }
+      .section:nth-child(even) {
+        animation-delay: 0.3s;
+      }
+      .about,
+      .timeline,
+      .dreams,
+      .gallery,
+      .notes,
+      .closing {
+        margin-bottom: 40px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+      h2 {
+        border-bottom: 2px solid #e6a1c3;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .timeline ul {
+        list-style: none;
+        padding: 0;
+      }
+      .timeline li {
+        margin-bottom: 15px;
+      }
+      .slideshow {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+      .slideshow img {
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 2s ease-in-out;
+      }
+      .slideshow img.active {
+        opacity: 1;
+        position: relative;
+      }
+      .slideshow {
+        width: 40%;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .slideshow img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .notes p {
+        font-style: italic;
+        margin-bottom: 12px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 1em;
+        background-color: #fddde6;
+        animation: fadeIn 2s ease;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Floating hearts */
+      .heart {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: red;
+        transform: rotate(45deg);
+        animation: floatUp 6s linear infinite;
+        opacity: 0.7;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+      }
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
+      .heart::after {
+        left: -10px;
+        top: 0;
+      }
+      @keyframes floatUp {
+        0% {
+          bottom: 0;
+          transform: translateX(0) rotate(45deg);
+          opacity: 0.8;
+        }
+        100% {
+          bottom: 100vh;
+          transform: translateX(-50px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Adike Goodness Ndidi</h1>
+      <p>A tribute to your beauty, grace, and brilliance.</p>
+    </header>
+
+    <div class="section about">
+      <h2>About You</h2>
+      <p>
+        Goodness, you are calm like the dawn, beautiful as spring, and
+        intelligent beyond words. Your virtue shines brighter than the stars,
+        and your essence brings peace to my world.
+      </p>
+    </div>
+
+    <div class="section timeline">
+      <h2>Our Love Timeline</h2>
+      <ul>
+        <li>✨ The Day We Met – A new chapter began</li>
+        <li>💬 Endless Chats – Conversations I never want to end</li>
+        <li>
+          ❤️ First "I Love You" – The most magical words, yet to be said😁
+        </li>
+        <li>
+          📆 Special Memories – Too many to count yet, but all will be treasured.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section dreams">
+      <h2>Your Dreams</h2>
+      <p>
+        Watching you chase your dreams in Law inspires me every day. You are
+        destined for greatness, and the world will soon witness the brilliance
+        of Adike Goodness Ndidi, Esq.
+      </p>
+      <p><em>“The law is reason, free from passion.” – Aristotle</em></p>
+      <p><em>The Law! The Law!!😂</em> <em>My Personal lawyer😉</em></p>
+    </div>
+
+    <div class="section gallery">
+      <h2>Photo corner😍</h2>
+      <div class="slideshow">
+        <img
+          src="images/IMG-20250525-WA0001.jpg"
+          class="active"
+          alt="Moment 1"
+        />
+        <img src="images/IMG-20250525-WA0006.jpg" alt="Moment 6">
+        <img src="images/IMG-20250525-WA0005.jpg" alt="Moment 5">
+        <img src="images/IMG-20250525-WA0002.jpg" alt="Moment 2" />
+        <img src="images/IMG-20250525-WA0003.jpg" alt="Moment 3" />
+      </div>
+    </div>
+
+    <div class="section notes">
+      <h2>Love Notes</h2>
+      <p>In a world of noise, your calm is my peace.</p>
+      <p>You are my favorite notification.</p>
+      <p>Each day with you is a gift I unwrap with joy.</p>
+      <p>I Love listening to your voice when you speak.</p>
+    </div>
+
+    <div class="section closing">
+      <h2>Final Word</h2>
+      <p>
+        Forever grateful for your love to come, Goodness. This is a token of my
+        admiration and love for you. You are not just part of my story – you are
+        the story.
+      </p>
+    </div>
+
+    <footer>With love from, <strong>Micky</strong>💖</footer>
+
+    <!-- Floating hearts generator -->
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+      setInterval(createHeart, 800);
+    </script>
+
+    <!-- Slideshow script -->
+    <script>
+      const slides = document.querySelectorAll(".slideshow img");
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 4000);
+    </script>
+  </body>
+</html>
