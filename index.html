@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adike Goodness Ndidi</title>
+    <link rel="icon" href="images/favicon-heart.png" type="image/png" />
     <style>
       body {
         margin: 0;
@@ -13,6 +14,7 @@
         scroll-behavior: smooth;
         overflow-x: hidden;
       }
+
       header {
         background: linear-gradient(to right, #ffdde1, #ee9ca7);
         padding: 60px 20px;
@@ -20,13 +22,56 @@
         animation: fadeInDown 1.5s ease;
         position: relative;
       }
+
       header h1 {
         font-size: 3em;
         margin: 0;
       }
+
       header p {
         font-size: 1.3em;
+        margin-top: 10px;
       }
+
+      .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+        border-right: 2px solid #2c003e;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background: #fddde6;
+        padding: 10px;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #5e004e;
+        font-weight: bold;
+      }
+
       .section {
         padding: 40px 20px;
         max-width: 900px;
@@ -35,9 +80,11 @@
         transform: translateY(20px);
         animation: fadeInUp 1s ease forwards;
       }
+
       .section:nth-child(even) {
         animation-delay: 0.3s;
       }
+
       .about,
       .timeline,
       .dreams,
@@ -50,27 +97,32 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 30px;
       }
+
       h2 {
         border-bottom: 2px solid #e6a1c3;
         padding-bottom: 10px;
         margin-bottom: 20px;
       }
+
       .timeline ul {
         list-style: none;
         padding: 0;
       }
+
       .timeline li {
         margin-bottom: 15px;
       }
+
       .slideshow {
         width: 100%;
         max-width: 600px;
         margin: auto;
-        border-radius: 10px;
+        border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         position: relative;
       }
+
       .slideshow img {
         width: 100%;
         height: auto;
@@ -81,28 +133,17 @@
         left: 0;
         transition: opacity 2s ease-in-out;
       }
+
       .slideshow img.active {
         opacity: 1;
         position: relative;
-      }
-      .slideshow {
-        width: 40%;
-        max-width: 600px;
-        margin: auto;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
-      .slideshow img {
-        width: 100%;
-        height: auto;
-        display: block;
       }
 
       .notes p {
         font-style: italic;
         margin-bottom: 12px;
       }
+
       footer {
         text-align: center;
         padding: 20px;
@@ -152,7 +193,9 @@
         transform: rotate(45deg);
         animation: floatUp 6s linear infinite;
         opacity: 0.7;
+        z-index: 1000;
       }
+
       .heart::before,
       .heart::after {
         content: "";
@@ -162,6 +205,7 @@
         background: red;
         border-radius: 50%;
       }
+
       .heart::before {
         top: -10px;
         left: 0;
@@ -170,6 +214,7 @@
         left: -10px;
         top: 0;
       }
+
       @keyframes floatUp {
         0% {
           bottom: 0;
@@ -182,15 +227,48 @@
           opacity: 0;
         }
       }
+
+      /* Scroll to top button */
+      #topBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background-color: #ffb6c1;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+
+      #topBtn:hover {
+        background-color: #e68fae;
+      }
+
+      audio {
+        display: none;
+      }
     </style>
   </head>
+
   <body>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#dreams">Dreams</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#notes">Notes</a>
+      <a href="#closing">Final</a>
+    </nav>
+
     <header>
       <h1>Adike Goodness Ndidi</h1>
-      <p>A tribute to your beauty, grace, and brilliance.</p>
+      <p class="typewriter">A tribute to your beauty, grace, and brilliance.</p>
     </header>
 
-    <div class="section about">
+    <div id="about" class="section about">
       <h2>About You</h2>
       <p>
         Goodness, you are calm like the dawn, beautiful as spring, and
@@ -199,7 +277,7 @@
       </p>
     </div>
 
-    <div class="section timeline">
+    <div id="timeline" class="section timeline">
       <h2>Our Love Timeline</h2>
       <ul>
         <li>✨ The Day We Met – A new chapter began</li>
@@ -208,12 +286,13 @@
           ❤️ First "I Love You" – The most magical words, yet to be said😁
         </li>
         <li>
-          📆 Special Memories – Too many to count yet, but all will be treasured.
+          📆 Special Memories – Too many to count yet, but all will be
+          treasured.
         </li>
       </ul>
     </div>
 
-    <div class="section dreams">
+    <div id="dreams" class="section dreams">
       <h2>Your Dreams</h2>
       <p>
         Watching you chase your dreams in Law inspires me every day. You are
@@ -224,7 +303,7 @@
       <p><em>The Law! The Law!!😂</em> <em>My Personal lawyer😉</em></p>
     </div>
 
-    <div class="section gallery">
+    <div id="gallery" class="section gallery">
       <h2>Photo corner😍</h2>
       <div class="slideshow">
         <img
@@ -232,14 +311,14 @@
           class="active"
           alt="Moment 1"
         />
-        <img src="images/IMG-20250525-WA0006.jpg" alt="Moment 6">
-        <img src="images/IMG-20250525-WA0005.jpg" alt="Moment 5">
+        <img src="images/IMG-20250525-WA0006.jpg" alt="Moment 6" />
+        <img src="images/IMG-20250525-WA0005.jpg" alt="Moment 5" />
         <img src="images/IMG-20250525-WA0002.jpg" alt="Moment 2" />
         <img src="images/IMG-20250525-WA0003.jpg" alt="Moment 3" />
       </div>
     </div>
 
-    <div class="section notes">
+    <div id="notes" class="section notes">
       <h2>Love Notes</h2>
       <p>In a world of noise, your calm is my peace.</p>
       <p>You are my favorite notification.</p>
@@ -247,7 +326,7 @@
       <p>I Love listening to your voice when you speak.</p>
     </div>
 
-    <div class="section closing">
+    <div id="closing" class="section closing">
       <h2>Final Word</h2>
       <p>
         Forever grateful for your love to come, Goodness. This is a token of my
@@ -258,8 +337,12 @@
 
     <footer>With love from, <strong>Micky</strong>💖</footer>
 
-    <!-- Floating hearts generator -->
+    <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      ↑ Top
+    </button>
+
     <script>
+      // Floating hearts
       function createHeart() {
         const heart = document.createElement("div");
         heart.className = "heart";
@@ -268,18 +351,21 @@
         setTimeout(() => heart.remove(), 6000);
       }
       setInterval(createHeart, 800);
-    </script>
 
-    <!-- Slideshow script -->
-    <script>
+      // Slideshow
       const slides = document.querySelectorAll(".slideshow img");
       let current = 0;
-
       setInterval(() => {
         slides[current].classList.remove("active");
         current = (current + 1) % slides.length;
         slides[current].classList.add("active");
       }, 4000);
+
+      // Show scroll to top button
+      window.onscroll = () => {
+        document.getElementById("topBtn").style.display =
+          window.scrollY > 300 ? "block" : "none";
+      };
     </script>
   </body>
 </html>
